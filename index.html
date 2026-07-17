@@ -79,13 +79,15 @@
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(28px, 5vw, 42px);
   font-weight: 300; letter-spacing: 2px; line-height: 1.2;
-  color: var(--el-cream);
+  font-style: italic; color: var(--el-gold);
 }
-#eleusi-oracolo .el-title em { font-style: italic; color: var(--el-gold); }
+#eleusi-oracolo .el-title em { font-style: italic; }
 
 #eleusi-oracolo .el-subtitle {
-  margin-top: 16px; font-size: 14px;
-  color: rgba(245,240,232,0.45); line-height: 1.8;
+  margin-top: 16px; font-size: 16px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--el-gold); line-height: 1.8;
   max-width: 460px; margin-left: auto; margin-right: auto;
 }
 
@@ -98,7 +100,7 @@
 /* ── Eyebrow ── */
 #eleusi-oracolo .el-eyebrow {
   font-size: 11px; letter-spacing: 5px;
-  color: rgba(201,168,76,0.55); text-transform: uppercase;
+  color: rgba(201,168,76,0.85); text-transform: uppercase;
   margin-bottom: 18px; text-align: center;
 }
 
@@ -115,7 +117,7 @@
   padding: 20px 12px;
   background: rgba(245,240,232,0.03);
   border: 1px solid rgba(245,240,232,0.08);
-  color: rgba(245,240,232,0.45);
+  color: rgba(245,240,232,0.75);
   font-family: 'Cormorant Garamond', serif;
   font-size: 15px; letter-spacing: 1px;
   cursor: pointer; border-radius: 3px;
@@ -145,28 +147,28 @@
 }
 
 #eleusi-oracolo .el-field-hint {
-  font-size: 12px; color: rgba(245,240,232,0.28);
+  font-size: 13px; color: rgba(245,240,232,0.6);
   line-height: 1.5; margin-top: -3px;
 }
 
 #eleusi-oracolo .el-input {
   width: 100%; background: transparent;
-  border: none; border-bottom: 1px solid rgba(201,168,76,0.22);
+  border: none; border-bottom: 1px solid rgba(201,168,76,0.45);
   color: var(--el-cream);
   font-family: 'Cormorant Garamond', serif;
-  font-size: 18px; font-style: italic;
+  font-size: 16px; font-style: italic;
   padding: 9px 0; outline: none;
   transition: border-color 0.3s;
   resize: none; line-height: 1.7;
   border-radius: 0; box-shadow: none;
 }
-#eleusi-oracolo .el-input::placeholder { color: rgba(245,240,232,0.2); font-style: italic; }
+#eleusi-oracolo .el-input::placeholder { color: rgba(245,240,232,0.42); font-style: italic; }
 #eleusi-oracolo .el-input:focus {
   border-bottom-color: var(--el-gold);
   outline: none; box-shadow: none;
   background: transparent;
 }
-#eleusi-oracolo textarea.el-input { min-height: 54px; font-size: 15px; }
+#eleusi-oracolo textarea.el-input { min-height: 54px; font-size: 16px; }
 
 /* ── Lens & spread rows ── */
 #eleusi-oracolo .el-row {
@@ -178,7 +180,7 @@
   flex: 1; min-width: 105px; padding: 11px 8px;
   background: rgba(245,240,232,0.03);
   border: 1px solid rgba(245,240,232,0.07);
-  color: rgba(245,240,232,0.35);
+  color: rgba(245,240,232,0.65);
   font-family: 'Lato', sans-serif;
   font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
   cursor: pointer; border-radius: 2px; text-align: center;
@@ -195,7 +197,7 @@
   flex: 1; min-width: 135px; padding: 15px 12px;
   background: rgba(245,240,232,0.03);
   border: 1px solid rgba(245,240,232,0.08);
-  color: rgba(245,240,232,0.45);
+  color: rgba(245,240,232,0.75);
   font-family: 'Cormorant Garamond', serif;
   font-size: 14px; letter-spacing: 1px;
   cursor: pointer; border-radius: 2px; text-align: center;
@@ -230,7 +232,7 @@
 
 #eleusi-oracolo .el-back-btn {
   background: transparent; border: none;
-  color: rgba(245,240,232,0.3);
+  color: rgba(245,240,232,0.55);
   font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
   cursor: pointer; padding: 8px 0;
   font-family: 'Lato', sans-serif;
@@ -900,4 +902,5 @@
 })();
 </script>
 </body>
+<script defer src="/_vercel/insights/script.js"></script>
 </html>
