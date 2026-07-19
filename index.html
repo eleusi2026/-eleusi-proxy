@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
@@ -110,7 +110,7 @@
   gap: 14px; margin-bottom: 20px;
 }
 @media (min-width: 600px) {
-  #eleusi-oracolo .el-area-grid { grid-template-columns: repeat(4, 1fr); }
+  #eleusi-oracolo .el-area-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
 }
 
 #eleusi-oracolo .el-area-btn {
@@ -412,6 +412,7 @@
   <div id="el-step-area">
     <p class="el-eyebrow">Di cosa vuoi consultare l'oracolo?</p>
     <div class="el-area-grid">
+      <button type="button" class="el-area-btn" data-area="salute"><span class="el-icon">🌿</span>Benessere fisico e psichico</button>
       <button type="button" class="el-area-btn" data-area="lavoro"><span class="el-icon">💼</span>Lavoro &amp; Vocazione</button>
       <button type="button" class="el-area-btn" data-area="relazioni"><span class="el-icon">💞</span>Relazioni &amp; Legami</button>
       <button type="button" class="el-area-btn" data-area="finanze"><span class="el-icon">💰</span>Finanze &amp; Risorse</button>
@@ -456,7 +457,7 @@
   <!-- Reading -->
   <div id="el-reading" style="display:none;"></div>
 
-  <p class="el-disclaimer">Le carte non predicono: riflettono. Questo oracolo è uno strumento di esplorazione simbolica,<br>non sostituisce un percorso terapeutico né una consulenza professionale.</p>
+  <p class="el-disclaimer">Le carte non predicono: riflettono. Questo oracolo è uno strumento di esplorazione simbolica,<br>non sostituisce un percorso terapeutico, un consulto medico né una consulenza professionale.</p>
 
 </div>
 </div>
@@ -535,6 +536,17 @@
         { id:'q3', label:'Cosa ti chiama', hint:'Anche solo una sensazione vaga, un\'immagine, un desiderio ricorrente.', ph:'Es. Scrivere, aiutare, creare, insegnare, ricominciare...', long:true },
         { id:'q4', label:'Cosa resisti', hint:'Ciò che sai dovresti affrontare, ma continui a rimandare.', ph:'Es. Smettere di accontentarmi, espormi, scegliere davvero...', long:true },
         { id:'q5', label:'A chi o cosa appartieni', hint:'Ciò che senti come centro della tua vita, al di là del ruolo sociale.', ph:'Es. Alla scrittura, ai miei figli, a qualcosa che non so ancora nominare...', long:true }
+      ]
+    },
+    salute: {
+      label: 'Benessere fisico e psichico',
+      ctx: 'il rapporto con il corpo e con l\'equilibrio psichico, inteso in senso simbolico ed esistenziale — ciò che il corpo esprime, non ciò che va curato',
+      fields: [
+        { id:'q1', label:'La domanda', hint:'Cosa vuoi portare all\'oracolo?', ph:'Es. Cosa mi sta dicendo questa stanchezza? Perché il mio corpo si esprime così?', long:false },
+        { id:'q2', label:'Cosa senti nel corpo', hint:'Sensazioni, tensioni, segnali — così come li vivi, senza nomi clinici.', ph:'Es. Un peso sul petto, stanchezza che non passa, il sonno che si è fatto fragile...', long:true },
+        { id:'q3', label:'Come sta la tua psiche', hint:'Il clima interno di questo periodo — umori, pensieri ricorrenti.', ph:'Es. Inquietudine sottile, giornate spente, pensieri che girano in tondo...', long:true },
+        { id:'q4', label:'Da quando, e cosa è cambiato', hint:'Quando è iniziato questo stato, e cosa stava accadendo nella tua vita.', ph:'Es. Da qualche mese, da quando ho cambiato casa / perso una persona / smesso di...', long:true },
+        { id:'q5', label:'Di cosa avresti bisogno', hint:'Anche solo un\'intuizione — cosa ti chiede questo momento.', ph:'Es. Riposo vero, essere ascoltata, rallentare, dire un no che rimando...', long:true }
       ]
     }
   };
@@ -789,8 +801,10 @@
       'Non usare mai frasi come "questa carta ci invita", "è importante ricordare", "ti incoraggio a".\n' +
       'Preferisci metafore concrete, immagini vive, domande che aprono.\n' +
       'Non concludere mai con rassicurazioni. Lascia aperto, in tensione produttiva.\n' +
+      'Per gli Arcani Maggiori, la tua interpretazione porta l\'impronta della tradizione simbolica di Oswald Wirth: attenzione al simbolismo iniziatico ed esoterico delle immagini, ai dettagli cromatici e numerologici, alla carta come tappa di un cammino di trasformazione interiore. Integra questa sensibilità senza citare Wirth esplicitamente.\n' +
       'Area tematica: ' + AREA_CONFIG[selectedArea].ctx + '.\n' +
-      LENS_PROMPTS[selectedLens];
+      LENS_PROMPTS[selectedLens] +
+      (selectedArea === 'salute' ? '\n\nREGOLE INDEROGABILI PER QUEST\'AREA: La lettura è esclusivamente simbolica ed esistenziale. Non formulare mai diagnosi, ipotesi cliniche o nomi di disturbi. Non suggerire mai rimedi, terapie, integratori, pratiche di guarigione o modifiche a cure in corso. Non promettere né lasciar intendere guarigioni. Non scoraggiare mai il ricorso a medici o psicoterapeuti. Se dalle parole della persona emerge una sofferenza fisica o psichica significativa, intreccia nella sintesi — con delicatezza e senza allarmismo — l\'invito a farsi accompagnare anche da un professionista della salute, come gesto di cura verso di sé.' : '');
 
     const response = await fetch(PROXY_ENDPOINT, {
       method: 'POST',
