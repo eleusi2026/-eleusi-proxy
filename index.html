@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
@@ -13,9 +13,9 @@
 </head>
 <body>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Lato:wght@300;400&display=swap" rel="stylesheet">
- 
+
 <div id="eleusi-oracolo">
- 
+
 <style>
 #eleusi-oracolo {
   --el-acqua: #00897B;
@@ -35,11 +35,11 @@
   margin: 0 auto;
   max-width: 920px;
 }
- 
+
 #eleusi-oracolo *, #eleusi-oracolo *::before, #eleusi-oracolo *::after {
   margin: 0; padding: 0; box-sizing: border-box;
 }
- 
+
 #eleusi-oracolo .el-bg {
   position: absolute; inset: 0;
   background:
@@ -48,7 +48,7 @@
     radial-gradient(ellipse at 50% 50%, rgba(21,101,192,0.07) 0%, transparent 65%);
   pointer-events: none; z-index: 0;
 }
- 
+
 #eleusi-oracolo .el-star {
   position: absolute; width: 2px; height: 2px;
   background: rgba(201,168,76,0.55); border-radius: 50%;
@@ -58,23 +58,23 @@
   0%,100%{opacity:0.15;transform:scale(1);}
   50%{opacity:0.9;transform:scale(1.6);}
 }
- 
+
 #eleusi-oracolo .el-wrap {
   position: relative; z-index: 1;
   padding: 44px 24px 72px;
   max-width: 880px; margin: 0 auto;
 }
- 
+
 /* ── Header ── */
 #eleusi-oracolo .el-header { text-align: center; margin-bottom: 46px; }
- 
+
 #eleusi-oracolo .el-brand {
   font-family: 'Cormorant Garamond', serif;
   font-size: 12px; letter-spacing: 7px;
   color: var(--el-gold); text-transform: uppercase;
   margin-bottom: 14px; opacity: 0.75;
 }
- 
+
 #eleusi-oracolo .el-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(28px, 5vw, 42px);
@@ -82,7 +82,7 @@
   font-style: italic; color: var(--el-gold);
 }
 #eleusi-oracolo .el-title em { font-style: italic; }
- 
+
 #eleusi-oracolo .el-subtitle {
   margin-top: 16px; font-size: 16px;
   font-family: 'Cormorant Garamond', serif;
@@ -90,20 +90,20 @@
   color: var(--el-gold); line-height: 1.8;
   max-width: 460px; margin-left: auto; margin-right: auto;
 }
- 
+
 #eleusi-oracolo .el-divider {
   width: 70px; height: 1px;
   background: linear-gradient(90deg, transparent, var(--el-gold), transparent);
   margin: 24px auto;
 }
- 
+
 /* ── Eyebrow ── */
 #eleusi-oracolo .el-eyebrow {
   font-size: 11px; letter-spacing: 5px;
   color: rgba(201,168,76,0.85); text-transform: uppercase;
   margin-bottom: 18px; text-align: center;
 }
- 
+
 /* ── Area grid ── */
 #eleusi-oracolo .el-area-grid {
   display: grid; grid-template-columns: repeat(2, 1fr);
@@ -112,7 +112,7 @@
 @media (min-width: 600px) {
   #eleusi-oracolo .el-area-grid { grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); }
 }
- 
+
 #eleusi-oracolo .el-area-btn {
   padding: 20px 12px;
   background: rgba(245,240,232,0.03);
@@ -130,27 +130,27 @@
   background: rgba(201,168,76,0.07);
   color: var(--el-gold);
 }
- 
+
 /* ── Fields ── */
 #eleusi-oracolo .el-fields {
   display: flex; flex-direction: column; gap: 22px;
   margin-bottom: 34px;
   animation: elFadeUp 0.5s ease forwards;
 }
- 
+
 #eleusi-oracolo .el-field { display: flex; flex-direction: column; gap: 7px; }
- 
+
 #eleusi-oracolo .el-field-label {
   font-size: 11px; letter-spacing: 4px;
   text-transform: uppercase; color: var(--el-gold);
   font-family: 'Cormorant Garamond', serif;
 }
- 
+
 #eleusi-oracolo .el-field-hint {
   font-size: 13px; color: rgba(245,240,232,0.6);
   line-height: 1.5; margin-top: -3px;
 }
- 
+
 #eleusi-oracolo .el-input {
   width: 100%; background: transparent;
   border: none; border-bottom: 1px solid rgba(201,168,76,0.45);
@@ -169,13 +169,13 @@
   background: transparent;
 }
 #eleusi-oracolo textarea.el-input { min-height: 54px; font-size: 16px; }
- 
+
 /* ── Lens & spread rows ── */
 #eleusi-oracolo .el-row {
   display: flex; gap: 10px; flex-wrap: wrap;
   margin-bottom: 32px;
 }
- 
+
 #eleusi-oracolo .el-lens-btn {
   flex: 1; min-width: 105px; padding: 11px 8px;
   background: rgba(245,240,232,0.03);
@@ -192,7 +192,7 @@
   border-color: rgba(0,137,123,0.35);
   color: var(--el-acqua);
 }
- 
+
 #eleusi-oracolo .el-spread-btn {
   flex: 1; min-width: 135px; padding: 15px 12px;
   background: rgba(245,240,232,0.03);
@@ -209,7 +209,7 @@
   border-color: rgba(201,168,76,0.4);
   color: var(--el-gold);
 }
- 
+
 /* ── Buttons ── */
 #eleusi-oracolo .el-draw-btn {
   display: inline-block; padding: 16px 44px;
@@ -224,12 +224,12 @@
   background: var(--el-gold); color: var(--el-dark);
 }
 #eleusi-oracolo .el-draw-btn:disabled { opacity: 0.35; cursor: not-allowed; }
- 
+
 #eleusi-oracolo .el-nav-row {
   display: flex; justify-content: space-between; align-items: center;
   gap: 16px; flex-wrap: wrap;
 }
- 
+
 #eleusi-oracolo .el-back-btn {
   background: transparent; border: none;
   color: rgba(245,240,232,0.55);
@@ -239,7 +239,7 @@
   transition: color 0.3s;
 }
 #eleusi-oracolo .el-back-btn:hover { color: rgba(245,240,232,0.6); background: transparent; }
- 
+
 /* ── Cards ── */
 #eleusi-oracolo .el-cards {
   display: flex; gap: 16px;
@@ -247,13 +247,13 @@
   margin-bottom: 48px;
 }
 #eleusi-oracolo .el-card-slot { flex: 1; min-width: 140px; max-width: 200px; }
- 
+
 #eleusi-oracolo .el-card-pos {
   text-align: center; font-size: 10px; letter-spacing: 3px;
   color: rgba(201,168,76,0.5); text-transform: uppercase;
   margin-bottom: 9px;
 }
- 
+
 #eleusi-oracolo .el-card {
   aspect-ratio: 2/3.5; border-radius: 8px;
   border: 1px solid rgba(201,168,76,0.18);
@@ -268,7 +268,7 @@
   100%{transform:rotateY(0) scale(1);opacity:1;}
 }
 #eleusi-oracolo .el-card.reversed { transform: rotate(180deg); }
- 
+
 #eleusi-oracolo .el-card-inner {
   padding: 13px 10px; text-align: center;
   width: 100%; height: 100%;
@@ -294,13 +294,13 @@
 #eleusi-oracolo .el-card-num { font-size: 10px; color: rgba(201,168,76,0.55); letter-spacing: 2px; text-transform: uppercase; }
 #eleusi-oracolo .el-card-rev { font-size: 9px; color: rgba(123,31,162,0.75); letter-spacing: 2px; text-transform: uppercase; margin-top: 3px; }
 #eleusi-oracolo .el-card-line { width: 34px; height: 1px; background: linear-gradient(90deg, transparent, var(--el-gold), transparent); margin: 5px auto; }
- 
+
 #eleusi-oracolo .el-s-cups { background: linear-gradient(160deg, #0D1A2E, #0A1220) !important; }
 #eleusi-oracolo .el-s-wands { background: linear-gradient(160deg, #1E180A, #14100A) !important; }
 #eleusi-oracolo .el-s-swords { background: linear-gradient(160deg, #1A0E24, #12091A) !important; }
 #eleusi-oracolo .el-s-pentacles { background: linear-gradient(160deg, #0A1C18, #071410) !important; }
 #eleusi-oracolo .el-s-major { background: linear-gradient(160deg, #1C1408, #120E04) !important; }
- 
+
 /* ── Loading ── */
 #eleusi-oracolo .el-loading { text-align: center; padding: 44px; display: none; }
 #eleusi-oracolo .el-loading.active { display: block; }
@@ -317,14 +317,14 @@
   font-family: 'Cormorant Garamond', serif;
   font-style: italic; color: rgba(245,240,232,0.45); font-size: 16px;
 }
- 
+
 /* ── Reading ── */
 #eleusi-oracolo .el-reading { animation: elFadeUp 0.5s ease forwards; }
 @keyframes elFadeUp {
   from{opacity:0;transform:translateY(16px);}
   to{opacity:1;transform:translateY(0);}
 }
- 
+
 #eleusi-oracolo .el-reading-title {
   font-family: 'Cormorant Garamond', serif;
   font-size: 12px; letter-spacing: 6px;
@@ -336,7 +336,7 @@
   color: rgba(0,137,123,0.5); text-transform: uppercase;
   margin-bottom: 32px;
 }
- 
+
 #eleusi-oracolo .el-card-reading {
   margin-bottom: 26px; padding: 24px 26px;
   background: rgba(245,240,232,0.025);
@@ -362,7 +362,7 @@
   animation: elBlink 0.8s step-end infinite;
 }
 @keyframes elBlink { 50% { opacity: 0; } }
- 
+
 #eleusi-oracolo .el-synthesis {
   background: rgba(0,137,123,0.055);
   border: 1px solid rgba(0,137,123,0.18);
@@ -384,7 +384,7 @@
   font-size: 18px; font-style: italic;
   line-height: 1.9; color: var(--el-cream); font-weight: 300;
 }
- 
+
 #eleusi-oracolo .el-reset-btn {
   display: none; margin: 40px auto 0;
   padding: 12px 30px; background: transparent;
@@ -399,7 +399,7 @@
   color: rgba(245,240,232,0.65);
   background: transparent;
 }
- 
+
 #eleusi-oracolo .el-disclaimer {
   text-align: center; font-size: 11px;
   color: rgba(201,168,76,0.75);
@@ -407,18 +407,18 @@
   font-style: italic;
 }
 </style>
- 
+
 <div class="el-bg"></div>
- 
+
 <div class="el-wrap">
- 
+
   <div class="el-header">
     <div class="el-brand">Eléusi</div>
     <div class="el-title">Oracolo dei <em>Tarocchi</em></div>
     <p class="el-subtitle">Per illuminare ciò che già sai, e ciò che ancora non osi vedere.</p>
     <div class="el-divider"></div>
   </div>
- 
+
   <!-- STEP 1: area -->
   <div id="el-step-area">
     <p class="el-eyebrow">Su cosa vuoi consultare l'oracolo?</p>
@@ -430,11 +430,11 @@
       <button type="button" class="el-area-btn" data-area="missione"><span class="el-icon">🌀</span>Senso &amp; Missione</button>
     </div>
   </div>
- 
+
   <!-- STEP 2: domande -->
   <div id="el-step-q" style="display:none;">
     <div id="el-fields" class="el-fields"></div>
- 
+
     <p class="el-eyebrow">Lente interpretativa</p>
     <div class="el-row" id="el-lens-row">
       <button type="button" class="el-lens-btn active" data-lens="psico"><span>🌑</span>Psicologica</button>
@@ -442,41 +442,41 @@
       <button type="button" class="el-lens-btn" data-lens="evol"><span>♇</span>Evolutiva</button>
       <button type="button" class="el-lens-btn" data-lens="tutto"><span>✦</span>Integrata</button>
     </div>
- 
+
     <p class="el-eyebrow">Tipo di stesa</p>
     <div class="el-row" id="el-spread-row">
       <button type="button" class="el-spread-btn active" data-spread="3"><span>☽ ☉ ☾</span>Passato · Presente · Futuro</button>
       <button type="button" class="el-spread-btn" data-spread="5"><span>✦ ✦ ✦ ✦ ✦</span>Croce Celtica</button>
       <button type="button" class="el-spread-btn" data-spread="1"><span>✦</span>Carta del Momento</button>
     </div>
- 
+
     <div class="el-nav-row">
       <button type="button" class="el-back-btn" id="el-back">← Cambia area</button>
       <button type="button" class="el-draw-btn" id="el-draw">✦ Mescola e Taglia ✦</button>
     </div>
   </div>
- 
+
   <!-- Cards -->
   <div id="el-cards" class="el-cards" style="display:none;"></div>
- 
+
   <!-- Loading -->
   <div class="el-loading" id="el-loading">
     <div class="el-orb"></div>
     <p>Le carte si rivelano...</p>
   </div>
- 
+
   <!-- Reading -->
   <div id="el-reading" style="display:none;"></div>
- 
+
   <p class="el-disclaimer">Le carte non predicono: riflettono. Questo oracolo è uno strumento di esplorazione simbolica,<br>non sostituisce un percorso terapeutico, un consulto medico né una consulenza professionale.</p>
- 
+
 </div>
 </div>
- 
+
 <script>
 (function() {
   'use strict';
- 
+
   /* ═══════════════════════════════════════════════════
      CONFIGURAZIONE — MODIFICA QUI
      Sostituisci con l'URL del tuo proxy Vercel.
@@ -484,10 +484,10 @@
      base delle carte, senza interpretazione AI.
      ═══════════════════════════════════════════════════ */
   const PROXY_ENDPOINT = '/api/oracle';
- 
+
   const root = document.getElementById('eleusi-oracolo');
   if (!root) return;
- 
+
   // ── Starfield ──
   const bg = root.querySelector('.el-bg');
   for (let i = 0; i < 70; i++) {
@@ -496,13 +496,13 @@
     s.style.cssText = 'left:' + (Math.random()*100) + '%;top:' + (Math.random()*100) + '%;--dur:' + (2+Math.random()*4) + 's;animation-delay:' + (Math.random()*5) + 's';
     bg.appendChild(s);
   }
- 
+
   // ── State ──
   let selectedArea = null;
   let selectedLens = 'psico';
   let selectedSpread = 3;
   let drawnCards = [];
- 
+
   // ── Config aree ──
   const AREA_CONFIG = {
     lavoro: {
@@ -561,60 +561,60 @@
       ]
     }
   };
- 
+
   // ── Mazzo ──
   const DECK = [
-    {n:'Il Matto',num:'0',sym:'🃏',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-0.jpg',suit:'major',up:'Libertà, inizio, salto nel vuoto. Un\'energia non ancora formata, piena di potenziale.',dn:'Imprudenza, paura del cambiamento, rimandare l\'inevitabile.'},
-    {n:'Il Mago',num:'I',sym:'🎩',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-1.jpg',suit:'major',up:'Volontà, maestria degli strumenti, capacità di manifestare.',dn:'Manipolazione, risorse non usate, dispersione dell\'energia.'},
-    {n:'La Papessa',num:'II',sym:'📜',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-2.jpg',suit:'major',up:'Conoscenza interiore, intuizione, pazienza. Ciò che è nascosto attende.',dn:'Segreti inconfessati, blocco del sapere, negazione della propria voce.'},
-    {n:'L\'Imperatrice',num:'III',sym:'🌿',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-3.jpg',suit:'major',up:'Abbondanza, creatività, nutrimento. Ciò che fiorisce quando sei nel tuo elemento.',dn:'Dipendenza, eccesso, creatività soffocata.'},
-    {n:'L\'Imperatore',num:'IV',sym:'⚔️',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-4.jpg',suit:'major',up:'Struttura, autorità, padronanza. È il momento di costruire con solidità.',dn:'Rigidità, controllo eccessivo, potere usato male.'},
-    {n:'Il Papa',num:'V',sym:'🏛️',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-5.jpg',suit:'major',up:'Tradizione, guida, consiglio saggio. Cercare un mentore o fidarsi di chi sa.',dn:'Dogmatismo, obbedienza cieca, norme che soffocano.'},
-    {n:'Gli Amanti',num:'VI',sym:'💞',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-6.jpg',suit:'major',up:'Scelta, valori, allineamento. Quale percorso risuona con chi sei davvero?',dn:'Disallineamento, scelta evitata, conflitto tra desiderio e dovere.'},
-    {n:'Il Carro',num:'VII',sym:'🏆',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-7.jpg',suit:'major',up:'Determinazione, controllo, vittoria in vista. Avanza con disciplina.',dn:'Aggressività, perdita di direzione, forza bruta senza visione.'},
-    {n:'La Forza',num:'VIII',sym:'🦁',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-8.jpg',suit:'major',up:'Coraggio morbido, resilienza, capacità di domare senza distruggere.',dn:'Dubbio di sé, esaurimento, forza usata contro di sé.'},
-    {n:'L\'Eremita',num:'IX',sym:'🕯️',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-9.jpg',suit:'major',up:'Riflessione, ritiro fertile, saggezza che viene dal dentro.',dn:'Isolamento, paura del mondo, ruminazione senza azione.'},
-    {n:'La Ruota della Fortuna',num:'X',sym:'☸️',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-10.jpg',suit:'major',up:'Cambiamento, cicli, momento propizio. Il vento sta girando.',dn:'Resistenza al cambiamento, karma insoluto, stagnazione.'},
-    {n:'La Giustizia',num:'XI',sym:'⚖️',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-11.jpg',suit:'major',up:'Chiarezza, causa-effetto, decisione equa. Guarda i fatti senza filtri.',dn:'Ingiustizia, evitare le conseguenze, squilibrio.'},
-    {n:'L\'Appeso',num:'XII',sym:'🌀',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-12.jpg',suit:'major',up:'Sospensione volontaria, cambio di prospettiva, lasciar andare il controllo.',dn:'Martirio inutile, stagnazione, sacrificio non scelto.'},
-    {n:'La Morte',num:'XIII',sym:'🌑',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-13.jpg',suit:'major',up:'Trasformazione radicale, fine di un ciclo. Ciò che finisce fa spazio.',dn:'Resistenza alla fine, attaccamento a ciò che non serve più.'},
-    {n:'La Temperanza',num:'XIV',sym:'🌊',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-14.jpg',suit:'major',up:'Alchimia, equilibrio, integrazione. Due forze che si fondono in qualcosa di nuovo.',dn:'Eccessi, squilibrio, impossibilità di mediare.'},
-    {n:'Il Diavolo',num:'XV',sym:'🔗',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-15.jpg',suit:'major',up:'Legami, pulsioni, materialità. Cosa ti tiene davvero ancorato?',dn:'Liberazione possibile, prendere coscienza di una dipendenza.'},
-    {n:'La Torre',num:'XVI',sym:'⚡',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-16.jpg',suit:'major',up:'Crollo improvviso, rivelazione, demolizione di ciò che era fragile.',dn:'Evitare il necessario collasso, paura del cambiamento radicale.'},
-    {n:'La Stella',num:'XVII',sym:'⭐',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-17.jpg',suit:'major',up:'Speranza, ispirazione, fiducia nel processo. Sei nel posto giusto.',dn:'Sfiducia, scoraggiamento, disconnessione dalla propria luce.'},
-    {n:'La Luna',num:'XVIII',sym:'🌙',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-18.jpg',suit:'major',up:'Inconscio, illusioni, paure. Qualcosa non è ancora chiaro — e va bene così.',dn:'Ansia, inganno, proiezioni da sciogliere.'},
-    {n:'Il Sole',num:'XIX',sym:'☀️',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-19.jpg',suit:'major',up:'Chiarezza, successo, vitalità. Il momento di brillare è adesso.',dn:'Egocentrismo, enfasi eccessiva, aspettative irrealistiche.'},
-    {n:'Il Giudizio',num:'XX',sym:'🔔',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-20.jpg',suit:'major',up:'Richiamo, risveglio, valutazione profonda. Cosa ti sta chiamando per nome?',dn:'Autogiudizio, chiamata ignorata, rifiuto di cambiare.'},
-    {n:'Il Mondo',num:'XXI',sym:'🌍',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/major-21.jpg',suit:'major',up:'Completamento, integrazione, successo pieno. Un ciclo si chiude con pienezza.',dn:'Incompiutezza, resistenza alla conclusione, mancanza di radicamento.'},
-    {n:'Asso di Coppe',num:'Asso',sym:'🏺',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/cups-1.jpg',suit:'cups',up:'Nuovo inizio emotivo, offerta del cuore, intuizione potente.',dn:'Blocco emotivo, offerta rifiutata, cuore chiuso.'},
-    {n:'Due di Coppe',num:'2',sym:'🤝',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/cups-2.jpg',suit:'cups',up:'Connessione, partnership, accordo profondo.',dn:'Rottura, squilibrio relazionale, isolamento.'},
-    {n:'Tre di Coppe',num:'3',sym:'🥂',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/cups-3.jpg',suit:'cups',up:'Celebrazione, collaborazione, comunità, gioia condivisa.',dn:'Superficialità, eccessi, isolamento dal gruppo.'},
-    {n:'Sei di Coppe',num:'6',sym:'🌸',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/cups-6.jpg',suit:'cups',up:'Nostalgia, radici, doni del passato che tornano utili.',dn:'Vivere nel passato, rifiuto di crescere.'},
-    {n:'Sette di Coppe',num:'7',sym:'🌫️',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/cups-7.jpg',suit:'cups',up:'Visioni, possibilità multiple, immaginazione fertile.',dn:'Illusioni, indecisione, confusione tra desiderio e realtà.'},
-    {n:'Regina di Coppe',num:'Regina',sym:'👑',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/cups-13.jpg',suit:'cups',up:'Intuizione matura, cura, intelligenza emotiva.',dn:'Dipendenza emotiva, confusione tra sentire e sapere.'},
-    {n:'Re di Coppe',num:'Re',sym:'🌊',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/cups-14.jpg',suit:'cups',up:'Maestria emotiva, autorità con compassione.',dn:'Repressione, manipolazione, distanza emotiva.'},
-    {n:'Asso di Bastoni',num:'Asso',sym:'🔥',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/wands-1.jpg',suit:'wands',up:'Scintilla creativa, impulso nuovo, energia pura di inizio.',dn:'Blocco creativo, entusiasmo spento, partenze false.'},
-    {n:'Tre di Bastoni',num:'3',sym:'🚢',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/wands-3.jpg',suit:'wands',up:'Espansione, visione a lungo termine, ciò che porta lontano.',dn:'Ostacoli imprevisti, ritardi, mancanza di visione.'},
-    {n:'Sette di Bastoni',num:'7',sym:'🛡️',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/wands-7.jpg',suit:'wands',up:'Difesa della propria posizione, tenere il punto.',dn:'Cedere sotto pressione, esaurimento, posizione indifendibile.'},
-    {n:'Otto di Bastoni',num:'8',sym:'⚡',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/wands-8.jpg',suit:'wands',up:'Velocità, notizie in arrivo, accelerazione.',dn:'Fretta, disorganizzazione, energie disperse.'},
-    {n:'Cavaliere di Bastoni',num:'Cavaliere',sym:'🐎',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/wands-12.jpg',suit:'wands',up:'Azione audace, entusiasmo travolgente, avanzare senza esitazioni.',dn:'Impulsività, avventatezza, fuoco che brucia tutto.'},
-    {n:'Regina di Bastoni',num:'Regina',sym:'🌻',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/wands-13.jpg',suit:'wands',up:'Carisma, determinazione creativa, leadership naturale.',dn:'Possessività, competitività distruttiva, esaurimento.'},
-    {n:'Asso di Spade',num:'Asso',sym:'🗡️',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/swords-1.jpg',suit:'swords',up:'Chiarezza mentale, verità tagliente, nuova comprensione.',dn:'Confusione, comunicazione distorta, verità evitata.'},
-    {n:'Due di Spade',num:'2',sym:'🙈',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/swords-2.jpg',suit:'swords',up:'Stallo, scelta difficile, tempo di togliersi la benda dagli occhi.',dn:'Indecisione paralizzante, rifiuto di vedere.'},
-    {n:'Tre di Spade',num:'3',sym:'💔',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/swords-3.jpg',suit:'swords',up:'Dolore chiarificatore, perdita che insegna, fine necessaria.',dn:'Rimuginare, ferite non elaborate, dolore cronicizzato.'},
-    {n:'Cinque di Spade',num:'5',sym:'🏳️',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/swords-5.jpg',suit:'swords',up:'Conflitto, sconfitta parziale, quando vincere non vale il costo.',dn:'Riconciliazione possibile, lasciare andare la battaglia.'},
-    {n:'Fante di Spade',num:'Fante',sym:'📡',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/swords-11.jpg',suit:'swords',up:'Mente acuta, curiosità. Informarsi prima di agire.',dn:'Gossip, astuzia mal usata, intenzioni poco chiare.'},
-    {n:'Regina di Spade',num:'Regina',sym:'🔪',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/swords-13.jpg',suit:'swords',up:'Chiarezza, indipendenza, parola precisa.',dn:'Freddezza, cinismo, comunicazione che ferisce.'},
-    {n:'Asso di Pentacoli',num:'Asso',sym:'💎',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/pentacles-1.jpg',suit:'pentacles',up:'Opportunità concreta, seme di prosperità, fondamenta solide.',dn:'Opportunità mancata, instabilità materiale.'},
-    {n:'Tre di Pentacoli',num:'3',sym:'🏗️',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/pentacles-3.jpg',suit:'pentacles',up:'Artigianalità, collaborazione, talento riconosciuto.',dn:'Lavoro mediocre, mancanza di riconoscimento.'},
-    {n:'Quattro di Pentacoli',num:'4',sym:'🏦',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/pentacles-4.jpg',suit:'pentacles',up:'Stabilità, sicurezza, controllo delle risorse.',dn:'Avarizia, paura della perdita, chiusura al rischio.'},
-    {n:'Sei di Pentacoli',num:'6',sym:'🤲',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/pentacles-6.jpg',suit:'pentacles',up:'Generosità, equilibrio dare-ricevere, giusto compenso.',dn:'Squilibrio di potere, dipendenza economica.'},
-    {n:'Sette di Pentacoli',num:'7',sym:'🌱',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/pentacles-7.jpg',suit:'pentacles',up:'Investimento a lungo termine, attesa fruttuosa, progresso lento ma reale.',dn:'Impazienza, dubbi sui risultati.'},
-    {n:'Nove di Pentacoli',num:'9',sym:'🌳',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/pentacles-9.jpg',suit:'pentacles',up:'Autonomia conquistata, abbondanza meritata, indipendenza.',dn:'Solitudine del successo, risultati effimeri.'},
-    {n:'Dieci di Pentacoli',num:'10',sym:'🏡',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/pentacles-10.jpg',suit:'pentacles',up:'Eredità, stabilità duratura, realizzazione completa.',dn:'Eredità pesante, vuoto nel successo.'},
-    {n:'Re di Pentacoli',num:'Re',sym:'👔',img:'https://ishtarcollective.blob.core.windows.net/rider-waite-tarot/pentacles-14.jpg',suit:'pentacles',up:'Padronanza materiale, concretezza, leadership solida.',dn:'Materialismo eccessivo, rigidità, controllo.'}
+    {n:'Il Matto',num:'0',sym:'🃏',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_00_Fool.jpg',suit:'major',up:'Libertà, inizio, salto nel vuoto. Un\'energia non ancora formata, piena di potenziale.',dn:'Imprudenza, paura del cambiamento, rimandare l\'inevitabile.'},
+    {n:'Il Mago',num:'I',sym:'🎩',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_01_Magician.jpg',suit:'major',up:'Volontà, maestria degli strumenti, capacità di manifestare.',dn:'Manipolazione, risorse non usate, dispersione dell\'energia.'},
+    {n:'La Papessa',num:'II',sym:'📜',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_02_High_Priestess.jpg',suit:'major',up:'Conoscenza interiore, intuizione, pazienza. Ciò che è nascosto attende.',dn:'Segreti inconfessati, blocco del sapere, negazione della propria voce.'},
+    {n:'L\'Imperatrice',num:'III',sym:'🌿',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_03_Empress.jpg',suit:'major',up:'Abbondanza, creatività, nutrimento. Ciò che fiorisce quando sei nel tuo elemento.',dn:'Dipendenza, eccesso, creatività soffocata.'},
+    {n:'L\'Imperatore',num:'IV',sym:'⚔️',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_04_Emperor.jpg',suit:'major',up:'Struttura, autorità, padronanza. È il momento di costruire con solidità.',dn:'Rigidità, controllo eccessivo, potere usato male.'},
+    {n:'Il Papa',num:'V',sym:'🏛️',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_05_Hierophant.jpg',suit:'major',up:'Tradizione, guida, consiglio saggio. Cercare un mentore o fidarsi di chi sa.',dn:'Dogmatismo, obbedienza cieca, norme che soffocano.'},
+    {n:'Gli Amanti',num:'VI',sym:'💞',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_06_Lovers.jpg',suit:'major',up:'Scelta, valori, allineamento. Quale percorso risuona con chi sei davvero?',dn:'Disallineamento, scelta evitata, conflitto tra desiderio e dovere.'},
+    {n:'Il Carro',num:'VII',sym:'🏆',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_07_Chariot.jpg',suit:'major',up:'Determinazione, controllo, vittoria in vista. Avanza con disciplina.',dn:'Aggressività, perdita di direzione, forza bruta senza visione.'},
+    {n:'La Forza',num:'VIII',sym:'🦁',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_08_Strength.jpg',suit:'major',up:'Coraggio morbido, resilienza, capacità di domare senza distruggere.',dn:'Dubbio di sé, esaurimento, forza usata contro di sé.'},
+    {n:'L\'Eremita',num:'IX',sym:'🕯️',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_09_Hermit.jpg',suit:'major',up:'Riflessione, ritiro fertile, saggezza che viene dal dentro.',dn:'Isolamento, paura del mondo, ruminazione senza azione.'},
+    {n:'La Ruota della Fortuna',num:'X',sym:'☸️',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_10_Wheel_of_Fortune.jpg',suit:'major',up:'Cambiamento, cicli, momento propizio. Il vento sta girando.',dn:'Resistenza al cambiamento, karma insoluto, stagnazione.'},
+    {n:'La Giustizia',num:'XI',sym:'⚖️',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_11_Justice.jpg',suit:'major',up:'Chiarezza, causa-effetto, decisione equa. Guarda i fatti senza filtri.',dn:'Ingiustizia, evitare le conseguenze, squilibrio.'},
+    {n:'L\'Appeso',num:'XII',sym:'🌀',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_12_Hanged_Man.jpg',suit:'major',up:'Sospensione volontaria, cambio di prospettiva, lasciar andare il controllo.',dn:'Martirio inutile, stagnazione, sacrificio non scelto.'},
+    {n:'La Morte',num:'XIII',sym:'🌑',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_13_Death.jpg',suit:'major',up:'Trasformazione radicale, fine di un ciclo. Ciò che finisce fa spazio.',dn:'Resistenza alla fine, attaccamento a ciò che non serve più.'},
+    {n:'La Temperanza',num:'XIV',sym:'🌊',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_14_Temperance.jpg',suit:'major',up:'Alchimia, equilibrio, integrazione. Due forze che si fondono in qualcosa di nuovo.',dn:'Eccessi, squilibrio, impossibilità di mediare.'},
+    {n:'Il Diavolo',num:'XV',sym:'🔗',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_15_Devil.jpg',suit:'major',up:'Legami, pulsioni, materialità. Cosa ti tiene davvero ancorato?',dn:'Liberazione possibile, prendere coscienza di una dipendenza.'},
+    {n:'La Torre',num:'XVI',sym:'⚡',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_16_Tower.jpg',suit:'major',up:'Crollo improvviso, rivelazione, demolizione di ciò che era fragile.',dn:'Evitare il necessario collasso, paura del cambiamento radicale.'},
+    {n:'La Stella',num:'XVII',sym:'⭐',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_17_Star.jpg',suit:'major',up:'Speranza, ispirazione, fiducia nel processo. Sei nel posto giusto.',dn:'Sfiducia, scoraggiamento, disconnessione dalla propria luce.'},
+    {n:'La Luna',num:'XVIII',sym:'🌙',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_18_Moon.jpg',suit:'major',up:'Inconscio, illusioni, paure. Qualcosa non è ancora chiaro — e va bene così.',dn:'Ansia, inganno, proiezioni da sciogliere.'},
+    {n:'Il Sole',num:'XIX',sym:'☀️',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_19_Sun.jpg',suit:'major',up:'Chiarezza, successo, vitalità. Il momento di brillare è adesso.',dn:'Egocentrismo, enfasi eccessiva, aspettative irrealistiche.'},
+    {n:'Il Giudizio',num:'XX',sym:'🔔',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_20_Judgement.jpg',suit:'major',up:'Richiamo, risveglio, valutazione profonda. Cosa ti sta chiamando per nome?',dn:'Autogiudizio, chiamata ignorata, rifiuto di cambiare.'},
+    {n:'Il Mondo',num:'XXI',sym:'🌍',img:'https://commons.wikimedia.org/wiki/Special:FilePath/RWS_Tarot_21_World.jpg',suit:'major',up:'Completamento, integrazione, successo pieno. Un ciclo si chiude con pienezza.',dn:'Incompiutezza, resistenza alla conclusione, mancanza di radicamento.'},
+    {n:'Asso di Coppe',num:'Asso',sym:'🏺',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Cups01.jpg',suit:'cups',up:'Nuovo inizio emotivo, offerta del cuore, intuizione potente.',dn:'Blocco emotivo, offerta rifiutata, cuore chiuso.'},
+    {n:'Due di Coppe',num:'2',sym:'🤝',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Cups02.jpg',suit:'cups',up:'Connessione, partnership, accordo profondo.',dn:'Rottura, squilibrio relazionale, isolamento.'},
+    {n:'Tre di Coppe',num:'3',sym:'🥂',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Cups03.jpg',suit:'cups',up:'Celebrazione, collaborazione, comunità, gioia condivisa.',dn:'Superficialità, eccessi, isolamento dal gruppo.'},
+    {n:'Sei di Coppe',num:'6',sym:'🌸',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Cups06.jpg',suit:'cups',up:'Nostalgia, radici, doni del passato che tornano utili.',dn:'Vivere nel passato, rifiuto di crescere.'},
+    {n:'Sette di Coppe',num:'7',sym:'🌫️',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Cups07.jpg',suit:'cups',up:'Visioni, possibilità multiple, immaginazione fertile.',dn:'Illusioni, indecisione, confusione tra desiderio e realtà.'},
+    {n:'Regina di Coppe',num:'Regina',sym:'👑',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Cups13.jpg',suit:'cups',up:'Intuizione matura, cura, intelligenza emotiva.',dn:'Dipendenza emotiva, confusione tra sentire e sapere.'},
+    {n:'Re di Coppe',num:'Re',sym:'🌊',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Cups14.jpg',suit:'cups',up:'Maestria emotiva, autorità con compassione.',dn:'Repressione, manipolazione, distanza emotiva.'},
+    {n:'Asso di Bastoni',num:'Asso',sym:'🔥',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Wands01.jpg',suit:'wands',up:'Scintilla creativa, impulso nuovo, energia pura di inizio.',dn:'Blocco creativo, entusiasmo spento, partenze false.'},
+    {n:'Tre di Bastoni',num:'3',sym:'🚢',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Wands03.jpg',suit:'wands',up:'Espansione, visione a lungo termine, ciò che porta lontano.',dn:'Ostacoli imprevisti, ritardi, mancanza di visione.'},
+    {n:'Sette di Bastoni',num:'7',sym:'🛡️',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Wands07.jpg',suit:'wands',up:'Difesa della propria posizione, tenere il punto.',dn:'Cedere sotto pressione, esaurimento, posizione indifendibile.'},
+    {n:'Otto di Bastoni',num:'8',sym:'⚡',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Wands08.jpg',suit:'wands',up:'Velocità, notizie in arrivo, accelerazione.',dn:'Fretta, disorganizzazione, energie disperse.'},
+    {n:'Cavaliere di Bastoni',num:'Cavaliere',sym:'🐎',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Wands12.jpg',suit:'wands',up:'Azione audace, entusiasmo travolgente, avanzare senza esitazioni.',dn:'Impulsività, avventatezza, fuoco che brucia tutto.'},
+    {n:'Regina di Bastoni',num:'Regina',sym:'🌻',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Wands13.jpg',suit:'wands',up:'Carisma, determinazione creativa, leadership naturale.',dn:'Possessività, competitività distruttiva, esaurimento.'},
+    {n:'Asso di Spade',num:'Asso',sym:'🗡️',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Swords01.jpg',suit:'swords',up:'Chiarezza mentale, verità tagliente, nuova comprensione.',dn:'Confusione, comunicazione distorta, verità evitata.'},
+    {n:'Due di Spade',num:'2',sym:'🙈',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Swords02.jpg',suit:'swords',up:'Stallo, scelta difficile, tempo di togliersi la benda dagli occhi.',dn:'Indecisione paralizzante, rifiuto di vedere.'},
+    {n:'Tre di Spade',num:'3',sym:'💔',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Swords03.jpg',suit:'swords',up:'Dolore chiarificatore, perdita che insegna, fine necessaria.',dn:'Rimuginare, ferite non elaborate, dolore cronicizzato.'},
+    {n:'Cinque di Spade',num:'5',sym:'🏳️',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Swords05.jpg',suit:'swords',up:'Conflitto, sconfitta parziale, quando vincere non vale il costo.',dn:'Riconciliazione possibile, lasciare andare la battaglia.'},
+    {n:'Fante di Spade',num:'Fante',sym:'📡',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Swords11.jpg',suit:'swords',up:'Mente acuta, curiosità. Informarsi prima di agire.',dn:'Gossip, astuzia mal usata, intenzioni poco chiare.'},
+    {n:'Regina di Spade',num:'Regina',sym:'🔪',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Swords13.jpg',suit:'swords',up:'Chiarezza, indipendenza, parola precisa.',dn:'Freddezza, cinismo, comunicazione che ferisce.'},
+    {n:'Asso di Pentacoli',num:'Asso',sym:'💎',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Pentacles01.jpg',suit:'pentacles',up:'Opportunità concreta, seme di prosperità, fondamenta solide.',dn:'Opportunità mancata, instabilità materiale.'},
+    {n:'Tre di Pentacoli',num:'3',sym:'🏗️',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Pentacles03.jpg',suit:'pentacles',up:'Artigianalità, collaborazione, talento riconosciuto.',dn:'Lavoro mediocre, mancanza di riconoscimento.'},
+    {n:'Quattro di Pentacoli',num:'4',sym:'🏦',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Pentacles04.jpg',suit:'pentacles',up:'Stabilità, sicurezza, controllo delle risorse.',dn:'Avarizia, paura della perdita, chiusura al rischio.'},
+    {n:'Sei di Pentacoli',num:'6',sym:'🤲',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Pentacles06.jpg',suit:'pentacles',up:'Generosità, equilibrio dare-ricevere, giusto compenso.',dn:'Squilibrio di potere, dipendenza economica.'},
+    {n:'Sette di Pentacoli',num:'7',sym:'🌱',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Pentacles07.jpg',suit:'pentacles',up:'Investimento a lungo termine, attesa fruttuosa, progresso lento ma reale.',dn:'Impazienza, dubbi sui risultati.'},
+    {n:'Nove di Pentacoli',num:'9',sym:'🌳',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Pentacles09.jpg',suit:'pentacles',up:'Autonomia conquistata, abbondanza meritata, indipendenza.',dn:'Solitudine del successo, risultati effimeri.'},
+    {n:'Dieci di Pentacoli',num:'10',sym:'🏡',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Pentacles10.jpg',suit:'pentacles',up:'Eredità, stabilità duratura, realizzazione completa.',dn:'Eredità pesante, vuoto nel successo.'},
+    {n:'Re di Pentacoli',num:'Re',sym:'👔',img:'https://commons.wikimedia.org/wiki/Special:FilePath/Pentacles14.jpg',suit:'pentacles',up:'Padronanza materiale, concretezza, leadership solida.',dn:'Materialismo eccessivo, rigidità, controllo.'}
   ];
- 
+
   const SPREADS = {
     1: [{ pos:'Messaggio del momento' }],
     3: [
@@ -630,20 +630,20 @@
       { pos:'Esito — direzione probabile' }
     ]
   };
- 
+
   const LENS_LABELS = { psico:'🌑 Psicologica', jung:'☯ Junghiana', evol:'♇ Evolutiva', tutto:'✦ Integrata' };
- 
+
   const LENS_PROMPTS = {
     psico: 'Usa una lente psicologica profonda: meccanismi di difesa, parti di sé, bisogni non riconosciuti, paura del cambiamento. Parla di dinamiche interne senza mai dire "la carta dice" — di\' invece "qualcosa in te", "una parte di te".',
     jung: 'Usa la lente junghiana: Ombra, Anima/Animus, complessi, individuazione, Sé, tensione degli opposti. Riconosci nelle carte gli archetipi che si attivano. Non spiegare la teoria — incarnala. Usa immagini, non concetti.',
     evol: 'Usa la lente dell\'astrologia evolutiva (Jeffrey Wolf Green): le carte parlano dell\'anima in evoluzione. Scopo evolutivo, pattern karmici, necessità di distaccarsi da strutture consolidate verso nuova consapevolezza. Parla di "ciò che l\'anima cerca di compiere", "il pattern ripetuto", "la direzione evolutiva". Non citare pianeti o segni.',
     tutto: 'Integra le lenti: psicologia del profondo, archetipi junghiani e astrologia evolutiva (scopo dell\'anima, pattern karmici). Muoviti fluidamente tra i livelli senza diventare accademica.'
   };
- 
+
   // ── DOM refs ──
   const $ = (sel) => root.querySelector(sel);
   const $$ = (sel) => root.querySelectorAll(sel);
- 
+
   // ── Event: area ──
   $$('.el-area-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -655,7 +655,7 @@
       $('#el-step-q').style.display = 'block';
     });
   });
- 
+
   function buildFields() {
     const cfg = AREA_CONFIG[selectedArea];
     const container = $('#el-fields');
@@ -669,13 +669,13 @@
         input + '</div>';
     }).join('');
   }
- 
+
   // ── Event: back ──
   $('#el-back').addEventListener('click', function() {
     $('#el-step-q').style.display = 'none';
     $('#el-step-area').style.display = 'block';
   });
- 
+
   // ── Event: lens / spread ──
   $$('.el-lens-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
@@ -684,7 +684,7 @@
       selectedLens = btn.getAttribute('data-lens');
     });
   });
- 
+
   $$('.el-spread-btn').forEach(function(btn) {
     btn.addEventListener('click', function() {
       $$('.el-spread-btn').forEach(function(b){ b.classList.remove('active'); });
@@ -692,10 +692,10 @@
       selectedSpread = parseInt(btn.getAttribute('data-spread'), 10);
     });
   });
- 
+
   // ── Draw ──
   $('#el-draw').addEventListener('click', drawCards);
- 
+
   function shuffle(arr) {
     const a = arr.slice();
     for (let i = a.length - 1; i > 0; i--) {
@@ -704,13 +704,13 @@
     }
     return a;
   }
- 
+
   function escapeHtml(str) {
     const div = document.createElement('div');
     div.textContent = str;
     return div.innerHTML;
   }
- 
+
   async function drawCards() {
     const cfg = AREA_CONFIG[selectedArea];
     const fieldValues = {};
@@ -718,12 +718,12 @@
       const el = $('#el-' + f.id);
       fieldValues[f.id] = el ? el.value.trim() : '';
     });
- 
+
     $('#el-step-q').style.display = 'none';
     $('#el-loading').classList.add('active');
- 
+
     await new Promise(function(r){ setTimeout(r, 1400); });
- 
+
     const shuffled = shuffle(DECK);
     const positions = SPREADS[selectedSpread];
     drawnCards = shuffled.slice(0, positions.length).map(function(card, i) {
@@ -732,19 +732,19 @@
         reversed: Math.random() < 0.3
       });
     });
- 
+
     $('#el-loading').classList.remove('active');
     renderCards();
- 
+
     await new Promise(function(r){ setTimeout(r, 700); });
- 
+
     const readingArea = $('#el-reading');
     readingArea.style.display = 'block';
     readingArea.innerHTML = buildReadingShell();
- 
+
     await streamInterpretations(fieldValues);
   }
- 
+
   function renderCards() {
     const area = $('#el-cards');
     area.innerHTML = '';
@@ -770,14 +770,14 @@
       area.appendChild(slot);
     });
   }
- 
+
   function buildReadingShell() {
     const areaLabel = AREA_CONFIG[selectedArea].label;
     let html = '<div class="el-reading">' +
       '<div class="el-reading-title">✦ &nbsp; Lettura &nbsp; ✦</div>' +
       '<div class="el-reading-meta">' + areaLabel + ' &nbsp;·&nbsp; ' + LENS_LABELS[selectedLens] + '</div>' +
       '<p id="el-waiting" style="text-align:center;font-family:\'Cormorant Garamond\',serif;font-style:italic;color:rgba(201,168,76,0.55);font-size:15px;margin-bottom:28px;">L\'oracolo sta componendo la lettura… un momento di raccoglimento.</p>';
- 
+
     drawnCards.forEach(function(card, i) {
       html += '<div class="el-card-reading">' +
         '<div class="el-r-pos">' + card.position + '</div>' +
@@ -785,7 +785,7 @@
         '<div class="el-r-text el-cursor" id="el-text-' + i + '"></div>' +
       '</div>';
     });
- 
+
     html += '<div class="el-synthesis" id="el-syn-box">' +
       '<div class="el-syn-label">Sintesi della lettura</div>' +
       '<div class="el-syn-text el-cursor" id="el-syn-text"></div>' +
@@ -794,7 +794,7 @@
     '</div>';
     return html;
   }
- 
+
   async function streamText(targetId, text) {
     const el = $('#' + targetId);
     if (!el) return;
@@ -806,7 +806,7 @@
     }
     el.classList.remove('el-cursor');
   }
- 
+
   async function callProxy(userPrompt) {
     const system = 'Sei la voce di Eléusi, uno spazio di consulenza che integra psicoterapia, astrologia junghiana e tarocchi.\n' +
       'Il tuo stile: poetico ma non vago, preciso ma non prescrittivo, caldo senza essere sentimentale.\n' +
@@ -820,7 +820,7 @@
       'Area tematica: ' + AREA_CONFIG[selectedArea].ctx + '.\n' +
       LENS_PROMPTS[selectedLens] +
       (selectedArea === 'salute' ? '\n\nREGOLE INDEROGABILI PER QUEST\'AREA: La lettura è esclusivamente simbolica ed esistenziale. Non formulare mai diagnosi, ipotesi cliniche o nomi di disturbi. Non suggerire mai rimedi, terapie, integratori, pratiche di guarigione o modifiche a cure in corso. Non promettere né lasciar intendere guarigioni. Non scoraggiare mai il ricorso a medici o psicoterapeuti. Se dalle parole della persona emerge una sofferenza fisica o psichica significativa, intreccia nella sintesi — con delicatezza e senza allarmismo — l\'invito a farsi accompagnare anche da un professionista della salute, come gesto di cura verso di sé.' : '');
- 
+
     const response = await fetch(PROXY_ENDPOINT, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -831,7 +831,7 @@
         messages: [{ role: 'user', content: userPrompt }]
       })
     });
- 
+
     if (!response.ok) throw new Error('HTTP ' + response.status);
     const data = await response.json();
     if (data && data.content && data.content[0] && data.content[0].text) {
@@ -839,34 +839,34 @@
     }
     throw new Error('Risposta non valida');
   }
- 
+
   async function streamInterpretations(fieldValues) {
     const cfg = AREA_CONFIG[selectedArea];
     const spreadName = selectedSpread === 1 ? 'Carta del Momento' :
       selectedSpread === 3 ? 'stesa Passato-Presente-Futuro' : 'Croce Celtica';
- 
+
     const contextLines = cfg.fields
       .map(function(f) { return fieldValues[f.id] ? f.label + ': "' + fieldValues[f.id] + '"' : null; })
       .filter(Boolean)
       .join('\n');
- 
+
     const cardsDesc = drawnCards.map(function(card, i) {
       return 'Carta ' + (i+1) + ' — Posizione: "' + card.position + '"\nNome: ' + card.n +
         ' (' + (card.reversed ? 'ROVESCIATA' : 'diritta') + ')\nSignificato base: ' +
         (card.reversed ? card.dn : card.up);
     }).join('\n\n');
- 
+
     let sepList = '[CARTA_1]\ntesto\n[CARTA_2]\ntesto\n';
     for (let k = 3; k <= drawnCards.length; k++) sepList += '[CARTA_' + k + ']\ntesto\n';
     sepList += '[SINTESI]\ntesto';
- 
+
     const prompt = (contextLines ? 'CONTESTO DELLA PERSONA:\n' + contextLines + '\n\n' : '') +
       'STESA: ' + spreadName + '\n\n' + cardsDesc + '\n\n' +
       'Scrivi un\'interpretazione in prosa per ciascuna carta (3-5 frasi), radicata nel contesto specifico. Poi una SINTESI finale (4-6 frasi) che intreccia le carte in un filo narrativo.\n\n' +
       'Usa esattamente questi separatori, senza testo prima del primo:\n' + sepList;
- 
+
     let useAI = PROXY_ENDPOINT && PROXY_ENDPOINT.indexOf('IL-TUO-PROGETTO') === -1;
- 
+
     if (useAI) {
       try {
         const full = await callProxy(prompt);
@@ -877,13 +877,13 @@
         for (let i = 1; i < parts.length; i += 2) {
           sections[parts[i]] = (parts[i + 1] || '').trim();
         }
- 
+
         for (let i = 0; i < drawnCards.length; i++) {
           const text = sections['CARTA_' + (i+1)] || (drawnCards[i].reversed ? drawnCards[i].dn : drawnCards[i].up);
           await streamText('el-text-' + i, text);
           await new Promise(function(r){ setTimeout(r, 100); });
         }
- 
+
         if (drawnCards.length > 1 && sections['SINTESI']) {
           const box = $('#el-syn-box');
           if (box) {
@@ -898,7 +898,7 @@
         if (window.console) console.error('Eléusi oracle:', err);
       }
     }
- 
+
     // ── Fallback statico ──
     var waitEl2 = $('#el-waiting');
     if (waitEl2) waitEl2.style.display = 'none';
@@ -909,7 +909,7 @@
     }
     finishReading();
   }
- 
+
   function finishReading() {
     const btn = $('#el-reset');
     if (btn) {
@@ -917,7 +917,7 @@
       btn.addEventListener('click', resetReading);
     }
   }
- 
+
   function resetReading() {
     $('#el-cards').style.display = 'none';
     $('#el-reading').style.display = 'none';
@@ -927,9 +927,9 @@
     drawnCards = [];
     selectedArea = null;
   }
- 
+
 })();
 </script>
 </body>
 <script defer src="/_vercel/insights/script.js"></script>
-</html>
+</html> 
