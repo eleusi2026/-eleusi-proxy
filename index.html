@@ -400,11 +400,58 @@
   background: transparent;
 }
 
+#eleusi-oracolo .el-actions {
+  display: none; justify-content: center; gap: 14px; flex-wrap: wrap;
+  margin: 40px auto 0;
+}
+#eleusi-oracolo .el-save-btn {
+  padding: 12px 26px; background: transparent;
+  border: 1px solid rgba(201,168,76,0.55);
+  color: var(--el-gold);
+  font-family: 'Lato', sans-serif;
+  font-size: 11px; letter-spacing: 3px; text-transform: uppercase;
+  cursor: pointer; border-radius: 2px; transition: all 0.3s;
+}
+#eleusi-oracolo .el-save-btn:hover {
+  background: var(--el-gold); color: var(--el-dark);
+}
+
 #eleusi-oracolo .el-disclaimer {
   text-align: center; font-size: 11px;
   color: rgba(201,168,76,0.75);
   margin-top: 36px; line-height: 1.7;
   font-style: italic;
+}
+
+@media print {
+  html, body { background: #fff !important; padding: 0 !important; }
+  #eleusi-oracolo { background: #fff !important; color: #222 !important; max-width: 100% !important; }
+  #eleusi-oracolo .el-bg,
+  #eleusi-oracolo #el-step-area,
+  #eleusi-oracolo #el-step-q,
+  #eleusi-oracolo #el-loading,
+  #eleusi-oracolo .el-actions,
+  #eleusi-oracolo .el-reset-btn,
+  #eleusi-oracolo #el-waiting { display: none !important; }
+  #eleusi-oracolo .el-wrap { padding: 12px 8px; }
+  #eleusi-oracolo .el-title,
+  #eleusi-oracolo .el-subtitle,
+  #eleusi-oracolo .el-brand,
+  #eleusi-oracolo .el-reading-title { color: #8a6d1f !important; }
+  #eleusi-oracolo .el-reading-meta,
+  #eleusi-oracolo .el-r-pos,
+  #eleusi-oracolo .el-syn-label { color: #00695C !important; }
+  #eleusi-oracolo .el-r-name,
+  #eleusi-oracolo .el-r-text,
+  #eleusi-oracolo .el-syn-text { color: #222 !important; }
+  #eleusi-oracolo .el-card-reading,
+  #eleusi-oracolo .el-synthesis {
+    background: none !important;
+    border-color: #bbb !important;
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  #eleusi-oracolo .el-disclaimer { color: #6b5416 !important; }
+  #eleusi-oracolo .el-card, #eleusi-oracolo .el-card * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 </style>
 
@@ -502,6 +549,7 @@
   let selectedLens = 'psico';
   let selectedSpread = 3;
   let drawnCards = [];
+  let lastFieldValues = {};
 
   // ── Config aree ──
   const AREA_CONFIG = {
@@ -790,6 +838,10 @@
       '<div class="el-syn-label">Sintesi della lettura</div>' +
       '<div class="el-syn-text el-cursor" id="el-syn-text"></div>' +
     '</div>' +
+    '<div class="el-actions" id="el-actions">' +
+      '<button type="button" class="el-save-btn" id="el-save">Salva la lettura</button>' +
+      '<button type="button" class="el-save-btn" id="el-print">Stampa / PDF</button>' +
+    '</div>' +
     '<button type="button" class="el-reset-btn" id="el-reset">← Nuova lettura</button>' +
     '</div>';
     return html;
@@ -841,6 +893,7 @@
   }
 
   async function streamInterpretations(fieldValues) {
+    lastFieldValues = fieldValues;
     const cfg = AREA_CONFIG[selectedArea];
     const spreadName = selectedSpread === 1 ? 'Carta del Momento' :
       selectedSpread === 3 ? 'stesa Passato-Presente-Futuro' : 'Croce Celtica';
@@ -910,12 +963,66 @@
     finishReading();
   }
 
+  function buildReadingText() {
+    const lensPlain = { psico:'Psicologica', jung:'Junghiana', evol:'Evolutiva', tutto:'Integrata' };
+    const cfg = AREA_CONFIG[selectedArea];
+    const today = new Date().toLocaleDateString('it-IT', { day:'numeric', month:'long', year:'numeric' });
+    let out = 'ELÉUSI — ORACOLO DEI TAROCCHI\n';
+    out += cfg.label + ' · Lente ' + lensPlain[selectedLens] + '\n';
+    out += today + '\n\n';
+
+    const answers = cfg.fields
+      .filter(function(f) { return lastFieldValues[f.id]; })
+      .map(function(f) { return f.label + ': ' + lastFieldValues[f.id]; });
+    if (answers.length) {
+      out += 'LE TUE PAROLE\n' + answers.join('\n') + '\n\n';
+    }
+
+    out += 'LA LETTURA\n\n';
+    drawnCards.forEach(function(card, i) {
+      const el = $('#el-text-' + i);
+      out += card.position + '\n';
+      out += card.n + (card.reversed ? ' (rovesciata)' : '') + '\n';
+      out += (el ? el.textContent.trim() : '') + '\n\n';
+    });
+
+    const syn = $('#el-syn-text');
+    const synBox = $('#el-syn-box');
+    if (syn && synBox && synBox.style.display !== 'none' && syn.textContent.trim()) {
+      out += 'SINTESI\n' + syn.textContent.trim() + '\n\n';
+    }
+
+    out += 'Le carte non predicono: riflettono. Questo oracolo è uno strumento di esplorazione simbolica, non sostituisce un percorso terapeutico, un consulto medico né una consulenza professionale.\n';
+    return out;
+  }
+
+  function downloadReading() {
+    const text = '\uFEFF' + buildReadingText();
+    const blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const d = new Date();
+    const stamp = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'lettura-tarocchi-eleusi-' + stamp + '.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(function() { URL.revokeObjectURL(url); }, 1000);
+  }
+
   function finishReading() {
     const btn = $('#el-reset');
     if (btn) {
       btn.style.display = 'block';
       btn.addEventListener('click', resetReading);
     }
+    const actions = $('#el-actions');
+    if (actions) actions.style.display = 'flex';
+    const saveBtn = $('#el-save');
+    if (saveBtn) saveBtn.addEventListener('click', downloadReading);
+    const printBtn = $('#el-print');
+    if (printBtn) printBtn.addEventListener('click', function() { window.print(); });
   }
 
   function resetReading() {
@@ -925,6 +1032,7 @@
     $('#el-step-area').style.display = 'block';
     $$('.el-area-btn').forEach(function(b){ b.classList.remove('active'); });
     drawnCards = [];
+    lastFieldValues = {};
     selectedArea = null;
   }
 
